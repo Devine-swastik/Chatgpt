@@ -16,17 +16,23 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Get environment variables
-API_ID = int(os.getenv("API_ID"))
-API_HASH = os.getenv("API_HASH")
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-OPENAI_KEY = os.getenv("OPENAI_KEY")
-BOT_NAME = os.getenv("BOT_NAME")
-BOT_USERNAME = os.getenv("BOT_USERNAME")
-OWNER_USERNAME = os.getenv("OWNER_USERNAME")
-SUPPORT_GROUP = os.getenv("SUPPORT_GROUP")
-START_IMG = os.getenv("START_IMG")
-UPDATE_CHANNEL = os.getenv("UPDATE_CHANNEL")
-OWNER_ID = int(os.getenv("OWNER_ID"))
+API_ID = int(os.getenv('API_ID', 29644708))
+API_HASH = os.getenv('API_HASH', '0db39046c635489ccb05d9a0ca395c9f')
+BOT_TOKEN = os.getenv('BOT_TOKEN', '7866262568:AAG-DzguR8kK6B7dzFQW53RFxoUUmeLzQsg')
+BOT_NAME = os.getenv('BOT_NAME', 'Chat Gpt')
+BOT_USERNAME = os.getenv('BOT_USERNAME', 'Devine_chatgpt_bot')
+OWNER_ID = int(os.getenv('OWNER_ID', '6338745050'))
+OWNER_USERNAME = os.getenv('OWNER_USERNAME', 'devine4x')
+UPDATE_CHANNEL = os.getenv('UPDATE_CHANNEL', 'Devine_Network')
+SUPPORT_GROUP = os.getenv('SUPPORT_GROUP', "Devine_Network")
+
+# OpenAI Configuration
+OPENAI_KEY = os.getenv('OPENAI_KEY', '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')
+
+# MongoDB Configuration
+MONGODB_URL = os.getenv('MONGODB_URL', 'mongodb+srv://godofgenjutsu9229:K2HFlJA7EbSZjC6Z@cluster0.l6zam.mongodb.net/?retryWrites=true&w=majority')
+
+# Check if all re
 
 DEVINE = Client(
     "chat-gpt",
